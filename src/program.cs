@@ -11,6 +11,10 @@ namespace src
                 log.error(1);
 
             string sourceFile = args[0];
+
+            if (sourceFile.Split('.')[1] != ".nand")
+                log.warn(401);
+
             string outBinary = sourceFile.Split('.')[0];
 
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))

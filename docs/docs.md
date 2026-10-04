@@ -1,4 +1,4 @@
-# 1bitatatime language documentation
+# nandcode language documentation
 
 The language is evaluated sequentially line-by-line. All lines following a `#` are treated as comments.
 
@@ -13,7 +13,7 @@ The language is evaluated sequentially line-by-line. All lines following a `#` a
 
 `false` and `0` are interchangable. 
 
-### example: swap values x and y ([examples/swap.1bit](examples/swap.1bit))
+### example: swap values x and y ([examples/swap.nand](examples/swap.nand))
 
 ```text
 in: x y
@@ -25,12 +25,12 @@ out: x y
 Check out more [examples](/examples/examples.md). 
 ## compiling
 
-To compile a source file using the 1bit transpiler, run
+To compile a source file using the nand transpiler, run
 ```bash
-./1bit swap.1bit
+./nand swap.nand
 
 # Expected output
-success[1b000]: compiled binary: swap.exe
+success[nc000]: compiled binary: swap.exe
 ```
 
 ### running the generated binary
@@ -54,49 +54,49 @@ A maximum of 62 variables can be declared in total.
 ## errors
 
 ### fatal errors
-`error [1b001]: no arguments given`
- - **cause**: 1bit compiler run with no source filepath
- - **fix**: pass a valid source as a argument for 1bit compiler
+`error [nc001]: no arguments given`
+ - **cause**: nand compiler run with no source filepath
+ - **fix**: pass a valid source as a argument for nand compiler
 
-`error [1b002]: gcc not installed`
+`error [nc002]: gcc not installed`
  - **cause**: path to gcc compiler could not be found
  - **fix**: ensure gcc is installed by running `gcc --version` in the folder you intend to compile from
 
-`error [1b003]: gcc failed to compile`
-- **cause**: 1bit compiler successfully created the intermediate c code, but gcc could not compile it
+`error [nc003]: gcc failed to compile`
+- **cause**: nand compiler successfully created the intermediate c code, but gcc could not compile it
 - **fix**: pray your code works next time
 
-`error [1b101]: not enough inputs`
+`error [nc101]: not enough inputs`
 - **cause**: not enough inputs passed into compiled binary
 - **fix**: pass the correct number of inputs into the compiled program, specified by the number of variables after `in:`, on the first line of your program
 
-`error [1b102]: code must end with out:`
+`error [nc102]: code must end with out:`
 - **cause**: `out:` keyword not present in your program
 - **fix**: add `out:` to the last line of your program
 
-`error [1b103]: source empty`
-- **cause**: pass empty source file to 1bit compiler 
+`error [nc103]: source empty`
+- **cause**: pass empty source file to nand compiler 
 - **cause**: pass source file that does not contain `in:`
 - **fix**: ensure your program is not empty and contains `in:` at the start of your program
 
-`error [1b201]: out of memory`
+`error [nc201]: out of memory`
 - **cause**: exceed 62 assignable variable limit
 - **fix**: try to recycle your variables by resetting their values with `myVariable = 0`
 
-`error [1b202]: variable undefined`
+`error [nc202]: variable undefined`
 - **cause**: using an undefined varible as an operand
 - **fix**: define variables before using them as operands
 
 ### non-fatal errors (warnings)
 
-`warn [1b401]: source does not end in .1bit`
-- **cause**: source file does not end in `.1bit`
-- **fix**: rename your source file to end in `.1bit`
+`warn [nc401]: source does not end in .nand`
+- **cause**: source file does not end in `.nand`
+- **fix**: rename your source file to end in `.nand`
 
-`warn [1b402]: program contains no inputs`
+`warn [nc402]: program contains no inputs`
 - **cause**: no variables declared as inputs in the `in:` block of your program
 - **fix**: declare inputs in the `in:` block of your program
 
-`warn [1b403]: program contains no outputs`
+`warn [nc403]: program contains no outputs`
 - **cause**: no variables declared as outputs in the `out:` block of your program
 - **fix**: declare outputs in the `out` block of your program

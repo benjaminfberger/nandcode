@@ -1,6 +1,6 @@
 {
-	"name": "1bitatatime",
-	"scopeName": "source.1bit",
+	"name": "nandcode",
+	"scopeName": "source.nand",
 	"patterns": [
 		{ "include": "#keywords" },
 		{ "include": "#operators" },
@@ -11,7 +11,7 @@
 		"keywords": {
 			"patterns": [
 				{
-					"name": "keyword.control.1bit",
+					"name": "keyword.control.nand",
 					"match": "\\b(in|out):"
 				}
 			]
@@ -19,11 +19,11 @@
 		"operators": {
 			"patterns": [
 				{
-					"name": "keyword.operator.nand.1bit",
+					"name": "keyword.operator.nand.nand",
 					"match": "!&|\\bnan\\b"
 				},
 				{
-					"name": "keyword.operator.assignment.1bit",
+					"name": "keyword.operator.assignment.nand",
 					"match": "="
 				}
 			]
@@ -31,7 +31,7 @@
 		"comments": {
 			"patterns": [
 				{
-					"name": "comment.line.number-sign.1bit",
+					"name": "comment.line.number-sign.nand",
 					"match": "#.*$"
 				}
 			]
@@ -39,7 +39,7 @@
 		"constants": {
 			"patterns": [
 				{
-					"name": "constant.language.1bit",
+					"name": "constant.language.nand",
 					"match": "\\b(true|false|1|0)\\b"
 				}
 			]

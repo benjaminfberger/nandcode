@@ -45,7 +45,7 @@ namespace src
 
                         if (argc == 0) log.warn(402);
 
-                        sb.AppendLine($"if (argc < {argc + 1}){{ printf(\"error [1b100]: not enough inputs\\n\"); return 1; }}");
+                        sb.AppendLine($"if (argc < {argc + 1}){{ printf(\"error [nc100]: not enough inputs\\n\"); return 1; }}");
                         sb.AppendLine("register unsigned long a, b, res;");
                         sb.AppendLine("register unsigned long ram = 1UL << 1;");
 

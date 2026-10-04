@@ -1,4 +1,4 @@
-# 1bitatatime (v1.0.0)
+# nandcode (v1.0.0)
 
 This language explores the absolute limits of computational minimalism by using NAND as its sole logical operation. Every logical gate, variable mutation, and hardware component is built entirely by chaining and reusing variables with this single primitive.
 
@@ -6,20 +6,20 @@ This repository has the transpiler, vscode syntax highligher and documentation.
 
 The runtime enforces a strict **64-bit virtual hardware environment** mapped entirely within a single physical CPU register, requiring zero RAM allocation overhead during active execution layers.
 
-Every program in 1bitatatime language runs in O(N) time and O(1) space. 
+Every program in nandcode language runs in O(N) time and O(1) space. 
 
 ## repository structure
 
 - `src/`: source code
 - `tests/`: unit tests
 - `examples/`: example code
-- `vscode/benjaminfberger.1bitatatime-1.0.0`: vscode syntax highlighting extension
+- `vscode/benjaminfberger.nandcode-1.0.0`: vscode syntax highlighting extension
 - `docs/`: documentation on hardware contraints and language structure
 - `misc/`: old c code
 
 ## examples
 
-### example: swap values x and y ([examples/swap.1bit](/examples/swap.1bit))
+### example: swap values x and y ([examples/swap.nand](/examples/swap.nand))
 
 ```text
 in: x y
@@ -29,7 +29,7 @@ y = temp
 out: x y
 ```
 
-### example: x xor y ([examples/xor.1bit](/examples/xor.1bit))
+### example: x xor y ([examples/xor.nand](/examples/xor.nand))
 
 ```text
 in: x y
@@ -43,9 +43,9 @@ Check out more [examples](/examples/examples.md).
 
 ## compiling
 
-To compile a source file using the 1bit transpiler, run
+To compile a source file using the nand transpiler, run
 ```bash
-./1bit swap.1bit
+./nand swap.nand
 
 # Expected output
 success[1b000]: compiled binary: swap.exe

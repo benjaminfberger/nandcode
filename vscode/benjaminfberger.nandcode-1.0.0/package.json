@@ -1,7 +1,7 @@
 {
-    "name": "1bitatatime",
-    "displayName": "1bitatatime",
-    "description": "Official syntax highlighting for the 1bitatatime langauge",
+    "name": "nandcode",
+    "displayName": "nandcode",
+    "description": "Official syntax highlighting for the nandcode language",
     "version": "1.0.0",
     "publisher": "benjaminfberger",
     "engines": {
@@ -13,16 +13,16 @@
     "contributes": {
         "languages": [
             {
-                "id": "1bit",
-                "extensions": [ ".1bit" ],
+                "id": "nand",
+                "extensions": [ ".nand" ],
                 "configuration": "./language-configuration.json"
             }
         ],
         "grammars": [
             {
-                "language": "1bit",
-                "scopeName": "source.1bit",
-                "path": "./syntax/1bit.tmLanguage.json"
+                "language": "nand",
+                "scopeName": "source.nand",
+                "path": "./syntax/nand.tmLanguage.json"
             }
         ]
     }
