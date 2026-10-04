@@ -6,7 +6,7 @@ This repository has the transpiler, vscode syntax highligher and documentation.
 
 The runtime enforces a strict **64-bit virtual hardware environment** mapped entirely within a single physical CPU register, requiring zero RAM allocation overhead during active execution layers.
 
-Every program in nandcode language runs in O(N) time and O(1) space. 
+Every program in nandcode runs in O(N) time and O(1) space. 
 
 ## repository structure
 
