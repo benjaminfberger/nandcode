@@ -361,3 +361,9 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Jetbrains .idea folder
+.idea/
+
+# Visual studio .vs folder
+.vs/
