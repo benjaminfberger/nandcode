@@ -62,6 +62,4 @@ The compiler will create a binary. Execute it by passing space separated binary 
 output: 0 1
 ```
 
-For comprehensive information on errors or warnings, or if you just want to learn more, refer to the [documentation](/docs/docs.md).
-
-[esolangs.org wiki](https://esolangs.org/wiki/Nandcode).
+For comprehensive information on errors or warnings, or if you just want to learn more, refer to the [documentation](/docs/docs.md) or read the [wiki](https://esolangs.org/wiki/Nandcode).
