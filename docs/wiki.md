@@ -1,6 +1,6 @@
 # Nandcode
 
-**Nandcode** was made by Benjamin F. Berger in 2026. It explores the absolute limits of computational minimalism by using NAND as its sole logical operation. Every logical gate, variable mutation, and hardware component is built entirely by chaining and reusing variables with this single primitive. The language is evaluated sequentially line-by-line. All lines following a `#` are treated as comments.
+**Nandcode** was made by Benjamin F. Berger in 2026. It explores the absolute limits of computational minimalism by using NAND as its sole logical operation. Every logical gate, variable mutation, and hardware component is built entirely by chaining and reusing variables with this single primitive. The runtime enforces a strict 64-bit virtual hardware environment mapped entirely within a single physical CPU register, requiring zero RAM allocation overhead during active execution layers. Every program in nandcode runs in O(N) time and O(1) space. The language is evaluated sequentially line-by-line. All lines following a `#` are treated as comments.
 
 ## Keywords
 - **`in:`** declares variables as inputs at the top of the file.
